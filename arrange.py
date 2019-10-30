@@ -1,7 +1,7 @@
 import numpy as np
 
 def arrange(A):
-    length = np.ma.size(A)
+    length = np.size(A)
     x = 0
     i = 0
     temp = 0
@@ -18,5 +18,11 @@ def arrange(A):
             x = 0
         else:
             x = x + 1
-        i = i +1
+        i = i + 1
 
+def ndarrange(A):
+    dim = np.size(A,0)
+    
+    for i in range (dim):
+        A[i] = arrange(A[i])
+    return A
