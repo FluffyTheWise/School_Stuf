@@ -50,3 +50,7 @@ def axisarrange(A, B):
         else:
             x = x + 1
         i = i + 1
+        
+def arrangeback(A):
+    A = np.flip(arrange(A))
+    return A
