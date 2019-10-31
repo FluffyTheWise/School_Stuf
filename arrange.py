@@ -54,3 +54,11 @@ def axisarrange(A, B):
 def arrangeback(A):
     A = np.flip(arrange(A))
     return A
+
+def ndarrangeback(A):
+    dim = np.size(A,0)
+    
+    for i in range (dim):
+        A[i] = arrangeback(A[i])
+    return A
+    
